@@ -182,14 +182,7 @@ def main():
 
     spliced_rom = rom.get_spliced_rom(args.disable_footer_strip)
 
-    if not args.skip_the_very_important_warning:
-        print(WARNING_TEXT)
-        print("Type here: ", end="")
-        answer = raw_input()
-
-        if answer != PROMPT_TEXT:
-            print("Wrong answer, halting...")
-            sys.exit(1)
+    print(WARNING_TEXT)
 
     print("Writing the edited ROM...")
 
